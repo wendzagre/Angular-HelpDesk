@@ -1,0 +1,30 @@
+<div class="container mt-3 col-md-6 offset-md-3">
+
+    <form [formGroup]="agentFormGroup" (ngSubmit)="handleUpdateAgent()" >
+       
+
+      <div class="mb-3">
+          <label class="form-label" >Nom</label>
+          <input type="text" formControlName="Name" class="form-control">
+      </div>
+  
+      <div class="mb-3">
+          <label class="form-label" >Prenom</label>
+          <input type="text" formControlName="Prenom" class="form-control">
+      </div>
+  
+      <div class="mb-3">
+          <label class="form-label" >Email</label>
+          <input type="email" formControlName="Email" class="form-control">
+      </div>
+  
+      <div class="mb-3">
+          <label class="form-label" >Telephone</label>
+          <input type="tel" formControlName="Telephone" class="form-control">
+      </div>
+  
+      <button [disabled]="agentFormGroup.invalid" class="btn btn-info" type="submit"> Enregistrer</button>
+  
+    </form>
+  
+  
